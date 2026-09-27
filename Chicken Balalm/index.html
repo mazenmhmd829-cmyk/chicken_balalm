@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chicken Balalm | تشيكن بلالم</title>
+
+  <meta
+    name="description"
+    content="Chicken Balalm - اطلب وجبتك المفضلة بسهولة"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+
+  <div id="pageLoader" class="page-loader">
+
+    <div class="loader-logo-wrap">
+      <img
+        src="assets/logo.jpg"
+        alt="Chicken Balalm"
+      >
+    </div>
+
+    <div class="loader-ring"></div>
+
+    <p>
+      Chicken Balalm
+    </p>
+
+  </div>
+
+
+  <!-- HEADER -->
+
+  <header
+    class="site-header"
+    id="siteHeader"
+  >
+
+    <a
+      class="brand"
+      href="#home"
+      aria-label="Chicken Balalm"
+    >
+
+      <img
+        src="assets/logo.jpg"
+        alt="Chicken Balalm logo"
+      >
+
+      <span>
+        Chicken Balalm
+      </span>
+
+    </a>
+
+
+    <nav class="main-nav">
+
+      <a href="#home">
+        الرئيسية
+      </a>
+
+      <a href="#menu">
+        المنيو
+      </a>
+
+      <a href="#addons">
+        الإضافات
+      </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+      <button
+        class="icon-btn"
+        id="profileBtn"
+        aria-label="بياناتي"
+        title="بياناتي"
+      >
+        👤
+      </button>
+
+
+      <button
+        class="cart-btn"
+        id="cartBtn"
+      >
+
+        🛒 السلة
+
+        <span id="cartCount">
+          0
+        </span>
+
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section
+      class="hero"
+      id="home"
+    >
+
+      <div class="hero-bg"></div>
+
+      <div class="hero-overlay"></div>
+
+
+      <div class="hero-content reveal active">
+
+        <div class="hero-badge">
+          🔥 Chicken Balalm
+        </div>
+
+
+        <img
+          class="hero-logo"
+          src="assets/logo.jpg"
+          alt="Chicken Balalm"
+        >
+
+
+        <h1>
+          طعم بلالم.. من أول لقمة
+        </h1>
+
+
+        <p>
+          اختار وجبتك، زوّد إضافاتك،
+          وسجّل بياناتك واطلب في ثواني.
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a
+            href="#menu"
+            class="primary-btn"
+          >
+            شوف المنيو
+            <span>↓</span>
+          </a>
+
+
+          <button
+            class="secondary-btn"
+            id="heroCartBtn"
+          >
+            🛒 افتح السلة
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="floating-card card-one">
+        🍗 فراخ كرسبي
+      </div>
+
+
+      <div class="floating-card card-two">
+        🔥 صوصاتك المفضلة
+      </div>
+
+
+      <div class="scroll-hint">
+        اسحب لتحت
+        <span>↓</span>
+      </div>
+
+    </section>
+
+
+    <!-- SEARCH -->
+
+    <section class="quick-tools">
+
+      <div class="search-shell">
+
+        <span class="search-icon">
+          ⌕
+        </span>
+
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="ابحث باسم الوجبة أو الإضافة..."
+          autocomplete="off"
+        >
+
+
+        <button
+          id="clearSearch"
+          class="clear-search"
+          aria-label="مسح البحث"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div
+        class="category-tabs"
+        role="tablist"
+      >
+
+        <button
+          class="category-tab active"
+          data-category="all"
+        >
+          الكل
+        </button>
+
+
+        <button
+          class="category-tab"
+          data-category="meals"
+        >
+          الوجبات
+        </button>
+
+
+        <button
+          class="category-tab"
+          data-category="crumbs"
+        >
+          الفتات
+        </button>
+
+
+        <button
+          class="category-tab"
+          data-category="cheesy"
+        >
+          التشيزي
+        </button>
+
+
+        <button
+          class="category-tab"
+          data-category="addons"
+        >
+          الإضافات
+        </button>
+
+      </div>
+
+
+      <p
+        id="searchHint"
+        class="search-hint"
+      >
+        اختار قسم أو اكتب اسم المنتج
+        للبحث السريع.
+      </p>
+
+    </section>
+
+
+    <!-- MEALS -->
+
+    <section
+      class="menu-section"
+      id="menu"
+    >
+
+      <div class="section-heading reveal">
+
+        <span class="eyebrow">
+          Meals section
+        </span>
+
+        <h2>
+          قسم الوجبات
+        </h2>
+
+        <p>
+          الوجبات الأساسية زي الداتا اللي في الصور.
+        </p>
+
+      </div>
+
+
+      <div
+        id="mealsGrid"
+        class="product-grid"
+      ></div>
+
+    </section>
+
+
+    <!-- CRUMBS -->
+
+    <section
+      class="menu-section compact-section"
+    >
+
+      <div class="section-heading reveal">
+
+        <span class="eyebrow">
+          Crumbs section
+        </span>
+
+        <h2>
+          قسم الفتات
+        </h2>
+
+        <p>
+          كل الفتات الأساسية بنفس الأسعار
+          الموجودة في الداتا.
+        </p>
+
+      </div>
+
+
+      <div
+        id="crumbsGrid"
+        class="product-grid"
+      ></div>
+
+    </section>
+
+
+    <!-- CHEESY -->
+
+    <section
+      class="menu-section compact-section"
+    >
+
+      <div class="section-heading reveal">
+
+        <span class="eyebrow">
+          Cheesy section
+        </span>
+
+        <h2>
+          قسم التشيزي
+        </h2>
+
+        <p>
+          اختار النكهة اللي على مزاجك.
+        </p>
+
+      </div>
+
+
+      <div
+        id="cheesyGrid"
+        class="product-grid"
+      ></div>
+
+    </section>
+
+
+    <!-- ADDONS -->
+
+    <section
+      class="addons-section"
+      id="addons"
+    >
+
+      <div class="addons-panel reveal">
+
+        <div class="section-heading addons-heading">
+
+          <span class="eyebrow">
+            Add-ons section
+          </span>
+
+          <h2>
+            قسم الإضافات
+          </h2>
+
+          <p>
+            الإضافات كلها في آخر المنيو
+            عشان العميل يزوّد طلبه بسهولة.
+          </p>
+
+        </div>
+
+
+        <div
+          id="addonsGrid"
+          class="addons-grid"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- STEPS -->
+
+    <section class="order-steps">
+
+      <div class="section-heading reveal">
+
+        <span class="eyebrow">
+          Easy ordering
+        </span>
+
+        <h2>
+          اطلب في 3 خطوات
+        </h2>
+
+      </div>
+
+
+      <div class="steps-grid">
+
+        <article class="step-card reveal">
+
+          <span>
+            01
+          </span>
+
+          <h3>
+            اختار
+          </h3>
+
+          <p>
+            اختار الوجبات والإضافات.
+          </p>
+
+        </article>
+
+
+        <article class="step-card reveal">
+
+          <span>
+            02
+          </span>
+
+          <h3>
+            راجع
+          </h3>
+
+          <p>
+            راجع الكميات والإجمالي من السلة.
+          </p>
+
+        </article>
+
+
+        <article class="step-card reveal">
+
+          <span>
+            03
+          </span>
+
+          <h3>
+            اطلب
+          </h3>
+
+          <p>
+            اكتب اسمك ورقمك وعنوانك وسجّل الطلب.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <img
+      src="assets/logo.jpg"
+      alt="Chicken Balalm"
+    >
+
+    <div>
+
+      <strong>
+        Chicken Balalm
+      </strong>
+
+      <p>
+        طعم دافي، قرمشة على أصولها.
+      </p>
+
+    </div>
+
+
+    <button
+      id="footerCartBtn"
+      class="footer-cart-btn"
+    >
+      🛒 طلبك من هنا
+    </button>
+
+  </footer>
+
+
+  <!-- CART OVERLAY -->
+
+  <div
+    class="drawer-overlay"
+    id="drawerOverlay"
+  ></div>
+
+
+  <!-- CART -->
+
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+    aria-hidden="true"
+  >
+
+    <div class="drawer-header">
+
+      <div>
+
+        <span class="eyebrow">
+          Your order
+        </span>
+
+        <h2>
+          سلة الطلب
+        </h2>
+
+      </div>
+
+
+      <button
+        class="close-btn"
+        id="closeCart"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div
+      id="cartItems"
+      class="cart-items"
+    ></div>
+
+
+    <div class="cart-summary">
+
+      <div>
+
+        <span>
+          عدد القطع
+        </span>
+
+        <strong id="cartQuantity">
+          0
+        </strong>
+
+      </div>
+
+
+      <div class="grand-total">
+
+        <span>
+          الإجمالي
+        </span>
+
+        <strong id="cartTotal">
+          0 جنيه
+        </strong>
+
+      </div>
+
+
+      <button
+        class="primary-btn wide"
+        id="checkoutBtn"
+      >
+        متابعة الطلب
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- CUSTOMER MODAL -->
+
+  <div
+    class="modal"
+    id="customerModal"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="close-btn modal-close"
+        data-close="customerModal"
+      >
+        ×
+      </button>
+
+
+      <div class="modal-title">
+
+        <span class="eyebrow">
+          Customer data
+        </span>
+
+        <h2 id="customerTitle">
+          بيانات العميل
+        </h2>
+
+        <p>
+          البيانات دي بتتسجل على جهاز العميل
+          عشان يقدر يعدّلها ويرجع يستخدمها
+          في الطلبات التالية.
+        </p>
+
+      </div>
+
+
+      <form
+        id="customerForm"
+        class="form-grid"
+      >
+
+        <label>
+
+          الاسم
+
+          <input
+            id="customerName"
+            type="text"
+            placeholder="اكتب اسمك"
+            required
+          >
+
+        </label>
+
+
+        <label>
+
+          رقم التليفون
+
+          <input
+            id="customerPhone"
+            type="tel"
+            placeholder="01xxxxxxxxx"
+            required
+          >
+
+        </label>
+
+
+        <label class="full">
+
+          العنوان
+
+          <textarea
+            id="customerAddress"
+            placeholder="اكتب عنوان التوصيل بالتفصيل"
+            required
+          ></textarea>
+
+        </label>
+
+
+        <div class="form-actions full">
+
+          <button
+            type="button"
+            class="ghost-btn"
+            data-close="customerModal"
+          >
+            إلغاء
+          </button>
+
+
+          <button
+            class="primary-btn"
+            type="submit"
+          >
+            حفظ البيانات
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- ORDER MODAL -->
+
+  <div
+    class="modal"
+    id="orderModal"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+  >
+
+    <div class="modal-card checkout-card">
+
+      <button
+        class="close-btn modal-close"
+        data-close="orderModal"
+      >
+        ×
+      </button>
+
+
+      <div class="modal-title">
+
+        <span class="eyebrow">
+          Checkout
+        </span>
+
+        <h2>
+          تأكيد الطلب
+        </h2>
+
+        <p>
+          راجع البيانات قبل تسجيل الطلب.
+        </p>
+
+      </div>
+
+
+      <div
+        class="checkout-preview"
+        id="checkoutPreview"
+      ></div>
+
+
+      <form
+        id="orderForm"
+        class="form-grid"
+      >
+
+        <label>
+
+          الاسم
+
+          <input
+            id="orderName"
+            type="text"
+            required
+          >
+
+        </label>
+
+
+        <label>
+
+          رقم التليفون
+
+          <input
+            id="orderPhone"
+            type="tel"
+            required
+          >
+
+        </label>
+
+
+        <label class="full">
+
+          العنوان
+
+          <textarea
+            id="orderAddress"
+            required
+          ></textarea>
+
+        </label>
+
+
+        <div class="form-actions full">
+
+          <button
+            type="button"
+            class="ghost-btn"
+            data-close="orderModal"
+          >
+            رجوع
+          </button>
+
+
+          <button
+            class="primary-btn"
+            type="submit"
+          >
+            تأكيد وتسجيل الطلب
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST -->
+
+  <div
+    class="toast"
+    id="toast"
+  >
+
+    <span id="toastIcon">
+      ✓
+    </span>
+
+    <div>
+
+      <strong id="toastTitle">
+        تم
+      </strong>
+
+      <p id="toastText"></p>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
